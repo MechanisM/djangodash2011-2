@@ -96,7 +96,7 @@ from readthedocs.settings.sqlite import *
 
 CARROT_BACKEND = "django"
 TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'),) + TEMPLATE_DIRS + CALLOWAY_TEMPLATE_DIRS
-
+SPHINX_ADD_PATH = os.path.join(PROJECT_ROOT, 'apps')
 
 # try:
 #     from local_settings import *
