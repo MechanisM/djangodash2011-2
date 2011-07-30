@@ -1,0 +1,4 @@
+--extra-index-url=http://opensource.washingtontimes.com/simple/
+python-memcached==1.45
+PIL
+django-admin-tools==0.4.0

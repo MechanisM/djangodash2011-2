@@ -1,0 +1,39 @@
+# These are your project's requirements and you should change them
+# to meet any customizations you wish to implement
+
+django
+calloway
+django-staticfiles
+
+docutils
+simplejson
+sphinx
+celery
+django-celery
+django-kombu
+#importlib
+django-extensions
+django-haystack
+mimeparse
+django-profiles
+mercurial
+bzr
+github2
+httplib2
+distutils2
+django-sentry
+Unipath
+BeautifulSoup
+unittest-xml-reporting
+redis
+-e git+http://github.com/nathanborror/django-basic-apps.git#egg=basic
+-e hg+http://bitbucket.org/andrewgodwin/south/#egg=south
+-e git+http://github.com/alex/django-taggit.git#egg=taggit
+-e git+http://github.com/ericflo/django-pagination.git#egg=pagination
+-e git+http://github.com/nathanborror/django-registration.git#egg=django-registration
+-e git+https://github.com/toastdriven/django-tastypie.git#egg=tastypie
+
+
+
+-r calloway_reqs.txt
+-e git+https://github.com/rtfd/readthedocs.org.git#egg=readthedocs
