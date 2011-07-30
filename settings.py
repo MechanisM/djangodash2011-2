@@ -93,6 +93,11 @@ TINYMCE_JS_URL = '%scalloway/js/tiny_mce/tiny_mce.js' % STATIC_URL
 TINYMCE_JS_ROOT = os.path.join(STATIC_ROOT, 'js/tiny_mce')
 
 from readthedocs.settings.sqlite import *
+
+CARROT_BACKEND = "django"
+TEMPLATE_DIRS = (os.path.join(PROJECT_ROOT, 'templates'),) + TEMPLATE_DIRS + CALLOWAY_TEMPLATE_DIRS
+
+
 # try:
 #     from local_settings import *
 # except ImportError:
