@@ -19,9 +19,13 @@ class HTMLIdTranslator(HTMLTranslator):
         if self.should_be_compact_paragraph(node):
             self.context.append('')
         else:
-            self.body.append('<a name="%s"></a>' % id_name)
-            self.body.append(self.starttag(node, 'p', '', CLASS='cn'))
-            self.context.append('</p>\n')
+            if node.parent.tagname not in ('list_item',):
+                self.body.append('<a name="%s"></a>' % id_name)
+                self.body.append(self.starttag(node, 'p', '', CLASS='cn'))
+                self.context.append('</p>\n')
+            else:
+                self.body.append(self.starttag(node, 'p', '',))
+                self.context.append('</p>\n')
     
     def visit_block_quote(self, node):
         self.id_counter += 1
