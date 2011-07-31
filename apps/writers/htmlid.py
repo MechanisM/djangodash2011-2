@@ -22,6 +22,9 @@ class HTMLIdTranslator(HTMLTranslator):
             if node.parent.tagname not in ('list_item',):
                 self.body.append('<a name="%s"></a>' % id_name)
                 self.body.append(self.starttag(node, 'p', '', CLASS='cn'))
+                self.body.append('<div class="cn_count">')
+                self.body.append('<a href="javascript:void(0);" data-disqus-identifier="%s"></a>' % id_name)
+                self.body.append('</div>\n')
                 self.context.append('</p>\n')
             else:
                 self.body.append(self.starttag(node, 'p', '',))
