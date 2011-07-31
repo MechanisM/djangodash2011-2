@@ -36,4 +36,4 @@ redis
 
 
 -r calloway_reqs.txt
--e git+https://github.com/rtfd/readthedocs.org.git#egg=readthedocs
+-e git+git://github.com/callowayproject/readthedocs.org.git#egg=readthedocs
